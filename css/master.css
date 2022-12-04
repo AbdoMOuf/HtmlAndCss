@@ -1,0 +1,686 @@
+/* color web site
+ #06283D
+ #1363DF
+ #47B5FF
+ #DFF6FF
+ 
+*/
+/* 
+golbal
+____________________________________________ */
+:root {
+    --pragrah-color: #444;
+    --pading-section: 70px;
+    --color-section: #f6f6f6;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container {
+
+    margin: auto;
+
+}
+
+
+@media(max-width:767px) {
+    .container {
+
+        width: 85%;
+    }
+}
+
+/* small */
+@media(min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* larg */
+@media(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* component is more use 
+___________________________________________________ */
+.specialheading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -4px;
+    margin: 0;
+}
+
+.specialheading+p {
+
+    text-align: center;
+    margin: -20px 0 0 0;
+    font-size: 20px;
+    color: #797979;
+}
+
+
+
+
+
+/* 
+header
+____________________________________________________________ */
+header {
+    padding: 20px;
+
+}
+
+header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .links {
+    position: relative;
+}
+
+header .logo {
+    width: 50px;
+}
+
+header .links ul::before {
+    content: "";
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    position: absolute;
+    right: 2px;
+    margin-top: -10px;
+
+
+
+}
+
+header .links ul {
+
+
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    background-color: var(--color-section);
+    position: absolute;
+    right: 0px;
+    min-width: 200px;
+    top: calc(100% + 10px);
+    display: none;
+    z-index: 5;
+}
+
+header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+
+}
+
+header .links ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+
+header .links ul li a:hover {
+    padding-left: 25px;
+
+}
+
+header .links:hover ul {
+    display: block;
+
+}
+
+/* main 
+_______________________________________________________________________ */
+main {
+    background-image: url("../media/sea-7344974_1920.jpg");
+    background-size: cover;
+    height: calc(100vh - 90px);
+    position: relative;
+}
+
+
+main .textintro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*      شرح فديوهات ال transform      */
+    text-align: center;
+
+}
+
+main .textintro h1 {
+    margin: 0;
+    color: #DFF6FF;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+main .textintro p {
+    font-size: 17px;
+    color: #DFF6FF;
+    line-height: 1.7;
+
+}
+
+
+/* start srvices
+_______________________________________________________________________________ */
+.services {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.services-contant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 80px;
+
+}
+
+.services-contant .serv {
+    display: flex;
+
+    margin-bottom: 20px;
+}
+
+.services-contant .serv i {
+    color: #06283D;
+    flex-basis: 60px;
+}
+
+.services-contant .serv .serv-text {
+    flex: 1;
+}
+
+.services-contant .serv .serv-text h3 {
+    margin: 0px;
+}
+
+.services-contant .serv .serv-text p {
+    font-weight: 300;
+    color: #444;
+    line-height: 1.7;
+}
+
+.col .imge-serve {
+    text-align: center;
+    position: relative;
+}
+
+.col .imge-serve::before {
+    content: "";
+    background-color: #06283D;
+    position: absolute;
+    width: 50px;
+    height: calc(100% + 60px);
+    margin-top: -30px;
+    right: 30px;
+    z-index: -1;
+}
+
+.col .imge-serve img {
+    width: 260px;
+
+}
+
+/* start feautures
+________________________________________________________________________ */
+.features {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: var(--color-section);
+}
+
+.features .colec {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .colec i {
+    color: #1363DF;
+    width: 60px;
+
+
+
+}
+
+.features .colec h2 {
+    font-weight: 800;
+    /* color: white; */
+}
+
+.features .colec p {
+    color: var(--pragrah-color);
+    line-height: 1.7;
+}
+
+/* start Portofolio
+______________________________________________________________________________ */
+.portofolio {
+    padding-top: var(--pading-section);
+    padding-bottom: var(--pading-section);
+    background-color: var(--color-section);
+}
+
+.portofolio .portofolio-contant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 80px;
+    grid-gap: 20px;
+}
+
+.portofolio .portofolio-contant .card {
+    /* background-color: white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.portofolio .portofolio-contant .card img {
+    width: 100%;
+
+}
+
+.portofolio .portofolio-contant .card .info {
+    text-align: center;
+    padding: 20px;
+
+}
+
+.portofolio .portofolio-contant .card .info h3 {
+    margin: 0;
+
+}
+
+.portofolio .portofolio-contant .card .info p {
+    line-height: 1.7;
+    color: var(--pragrah-color);
+    margin-bottom: 0;
+}
+
+/* About Us 
+____________________________________________________________________________*/
+.about {
+    padding-top: var(--pading-section);
+    padding-bottom: var(--pading-section);
+}
+
+.about-contant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 80px;
+
+}
+
+.about .about-contant .imgeabout {
+    position: relative;
+
+
+
+}
+
+.about .about-contant .imgeabout::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: calc(261px + 30px);
+    background-color: #06283D;
+    top: -15px;
+    left: -25px;
+    z-index: -1;
+
+
+}
+
+.about .about-contant .imgeabout::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: calc(261px + 30px);
+    background-color: #06283D;
+    margin-top: -15px;
+    margin-left: -25px;
+    z-index: -1;
+}
+
+.about .about-contant .aboutinfo P:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    margin-top: 0;
+
+}
+
+.about .about-contant .aboutinfo {
+    position: relative;
+
+}
+
+.about .about-contant .aboutinfo hr {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    border-color: #06283D;
+    display: inline-block;
+    margin-top: -20px;
+}
+
+.about .about-contant .aboutinfo P:last-child {
+    line-height: 1.7;
+    margin: 10px 0;
+    color: #777;
+
+}
+
+
+
+/* start contact
+______________________________________________________________________________ */
+.contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: var(--color-section);
+}
+
+.contact .infocontact {
+    text-align: center;
+}
+
+.contact .infocontact .label {
+    padding-top: 100px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #06283D;
+    letter-spacing: -2px;
+
+
+}
+
+.contact .infocontact .link {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1363DF;
+    text-decoration: none;
+
+}
+
+.contact .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.contact .social i {
+    color: #06283D;
+    margin-left: 10px;
+}
+
+/* start footer 
+____________________________________________________________________________*/
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #06283D;
+    color: white;
+}
+
+.footer span {
+    color: #1363DF;
+    font-weight: bold;
+}
+
+
+
+/* media
+_____________________________________________________________________________ */
+@media screen and (min-width:767px) {
+
+    .features .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (max-width:759px) {
+    main .textintro {
+        width: 320px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .specialheading {
+        color: #ebeced;
+        font-size: 50px;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin: 0;
+    }
+
+    .specialheading+p {
+
+        text-align: center;
+        margin: -15px 0 0 0;
+        font-size: 16px;
+        color: #797979;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .services-contant .serv {
+        flex-direction: column;
+
+
+    }
+
+    .services-contant {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .medianone {
+        display: none;
+    }
+}
+
+@media screen and (max-width:799px) {
+    .portofolio .portofolio-contant {
+        display: block;
+    }
+
+    .portofolio .portofolio-contant .card {
+        margin-bottom: 30px;
+        background-color: var(--color-section);
+    }
+
+    .portofolio .portofolio-contant .card img {
+        width: 60%;
+    }
+
+    .portofolio .portofolio-contant .card .info {
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width:800px)and (max-width:1100px) {
+    .portofolio .portofolio-contant {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 80px;
+        grid-gap: 20px;
+    }
+
+    .portofolio .portofolio-contant .card img {
+        width: 80%;
+    }
+
+    .portofolio .portofolio-contant .card .info {
+        width: 80%;
+    }
+
+
+}
+
+/* about
+___________________________________________________ */
+@media screen and (min-width:500px)and (max-width:1100px) {
+    .about-contant {
+        display: block;
+        text-align: center;
+    }
+
+    .about .about-contant img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .about .about-contant .imgeabout::before,
+    .about .about-contant .imgeabout::after {
+        display: none;
+    }
+
+    .about .about-contant .aboutinfo P:first-child {
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .about .about-contant .aboutinfo P:last-child {
+        line-height: normal;
+        font-size: 20px;
+    }
+
+    .about .about-contant .aboutinfo hr {
+        display: none;
+
+    }
+
+}
+
+@media screen and (max-width:499px) {
+    .about-contant {
+        display: block;
+        text-align: center;
+    }
+
+    .about .about-contant img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .about .about-contant .imgeabout::before,
+    .about .about-contant .imgeabout::after {
+        display: none;
+    }
+
+    .about .about-contant .aboutinfo P:first-child {
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .about .about-contant .aboutinfo hr {
+        display: none;
+
+    }
+
+    .about .about-contant .aboutinfo P:last-child {
+        line-height: normal;
+        font-size: 15px;
+    }
+
+
+
+
+
+}
+
+/* end about */
+
+
+
+@media screen and (max-width:700px) {
+    .contact .infocontact .label {
+        font-size: 25px;
+    }
+
+    .contact .infocontact .link {
+        font-size: 25px
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    .contact .infocontact .label,
+    .contact .infocontact .link {
+        font-size: 18px;
+        letter-spacing: normal;
+
+    }
+
+}
+
+@media screen and (max-width:355px) {
+
+    .contact .infocontact .label,
+    .contact .infocontact .link {
+        font-size: 16px;
+        letter-spacing: normal;
+
+    }
+
+    .contact .lb {
+        font-size: 16px;
+    }
+
+    .contact .social {
+        display: block;
+    }
+
+}
